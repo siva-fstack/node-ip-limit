@@ -22,7 +22,6 @@ console.log(minutes);
 
 const app = express();
 app.use(cors())
-// app.use(LimitMiddleware.limitByIp());
 
 
 // define a route handler for the default home page
@@ -30,12 +29,7 @@ app.get( "/", ( req, res ) => {
     res.send(`welcome to CarTrack`)
 } );
 
-// app.post( "/login", ( req, res ) => {
-//     // const check = LimitMiddleware.limitByIp();
-//     // console.log(check);
-//     res.send(`welcome to CarTrack`)
-//     // res.send(check)
-// } );
+
 
 app.post( "/login", ( req, res, next ) => {
     const requesterIp = String(req.headers['x-forwarded-for'] || req.connection.remoteAddress || 'unknown');
