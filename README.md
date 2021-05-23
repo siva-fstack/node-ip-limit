@@ -1,6 +1,6 @@
 
 
-# ![Simple Node App]
+# Simple Node App
 
 > It's just simple node app with ip limiting function.
 
@@ -22,7 +22,7 @@ Before start please read the following:
 # To Start the application
 > npm run start
 ```
-3. Access the below url in your brwser
+3. Access the below url in your browser
 [node-app](http://localhost:3000) 
 
 ## To know
